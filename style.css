@@ -17,7 +17,8 @@ body {
  body {
       background-image: url('download.jpg');
       background-repeat: no-repeat;
-      background-size: cover; /* Bisa juga: contain, auto */
+      background-size: cover;
+     background-opacity: 25%;
     }
 
 @keyframes fadeIn {
