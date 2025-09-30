@@ -14,6 +14,12 @@ body {
     animation: fadeIn 1s ease-in;
 }
 
+ body {
+      background-image: url('download.jpg');
+      background-repeat: no-repeat;
+      background-size: cover; /* Bisa juga: contain, auto */
+    }
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
