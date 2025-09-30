@@ -64,6 +64,7 @@ header .hamburger {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    align-items: center
 }
 
 header .hamburger div {
