@@ -3,75 +3,119 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
     color: #333;
+    line-height: 1.6;
+    animation: fadeIn 1s ease-in;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header */
 header {
-    background-color: #333;
+    background-color: #222;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 header .logo img {
+    height: 40px;
     margin-right: 10px;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
-}
-
-header nav ul li {
-    margin: 0 10px;
+    gap: 20px;
+    transition: all 0.3s ease;
 }
 
 header nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #444;
+    color: #00BFFF;
 }
 
 header .hamburger {
     display: none;
+    flex-direction: column;
+    gap: 5px;
     cursor: pointer;
 }
 
+header .hamburger div {
+    width: 25px;
+    height: 3px;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+/* Landing Section */
 .landing {
     text-align: center;
-    padding: 50px 20px;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #e0f7fa, #ffffff);
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .landing h1 {
     font-size: 3em;
+    margin-bottom: 20px;
+    animation: fadeIn 1.2s ease-in-out;
 }
 
 .landing p {
     font-size: 1.2em;
-    margin: 20px 0;
+    margin: 20px auto;
+    max-width: 600px;
+    animation: fadeIn 1.4s ease-in-out;
 }
 
 .cta-button {
-    padding: 10px 20px;
+    padding: 12px 24px;
     background-color: #007BFF;
     color: white;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
 }
 
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Footer */
 footer {
-    background-color: #333;
+    background-color: #222;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 30px 20px;
 }
 
 footer .contact-info {
@@ -82,23 +126,34 @@ footer .social-links a {
     margin: 0 10px;
     color: white;
     text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
 }
 
-/* Media Queries for Responsiveness */
+footer .social-links a:hover {
+    color: #00BFFF;
+}
+
+/* Responsive Styles */
 @media screen and (max-width: 768px) {
     header nav ul {
         display: none;
         flex-direction: column;
-        text-align: center;
+        background-color: #222;
         width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
     }
 
-    header nav ul li {
-        margin: 10px 0;
+    header nav ul.show {
+        display: flex;
+        animation: fadeIn 0.5s ease-in;
     }
 
     header .hamburger {
-        display: block;
+        display: flex;
     }
 
     .landing h1 {
@@ -109,4 +164,3 @@ footer .social-links a {
         font-size: 1em;
     }
 }
-
