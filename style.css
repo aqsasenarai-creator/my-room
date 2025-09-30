@@ -111,6 +111,17 @@ header .hamburger div {
     transform: translateY(-2px);
 }
 
+.buy-button {
+    padding: 12px 24px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
 /* Footer */
 footer {
     background-color: #222;
@@ -165,13 +176,3 @@ footer .social-links a:hover {
         font-size: 1em;
     }
     
-.buy-button {
-    padding: 12px 24px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    display: inline-block;
-}
